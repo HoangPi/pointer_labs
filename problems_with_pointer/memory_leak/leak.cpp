@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <new>
 
 void do_nothing(int i){
     long long *x = new long long;
@@ -16,6 +17,14 @@ void do_nothing(int i){
 int main(){
     for (int i = 0; 1; i++)
     {
-        do_nothing(i);
+        try
+        {
+            do_nothing(i);
+        }
+        catch(const std::bad_alloc e)
+        {
+            printf("You ran out of memory!\n");
+            break;
+        }
     }
 }
