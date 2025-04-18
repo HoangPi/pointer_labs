@@ -21,6 +21,7 @@ int main(){
         {
             do_nothing(i);
         }
+        // In Linux, the process would just die, no exception caught
         catch(const std::bad_alloc e)
         {
             printf("You ran out of memory!\n");
