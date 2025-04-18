@@ -50,6 +50,7 @@
                 "${file}",
                 "/Fe${workspaceRoot}\\debug\\main.exe",
                 "/Fo${workspaceRoot}\\debug\\main.obj",
+                "/EHsc",
                 "/Zi",
                 "/link",
             ],
