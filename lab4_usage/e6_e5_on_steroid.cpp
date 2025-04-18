@@ -33,13 +33,15 @@ public:
     void push_task(void (*f)(Context<T> *))
     {
         this->size++;
-        this->tasks = (void (**)(Context<T> *))realloc(this->tasks, this->size * sizeof(void (*)(Context<T> *)));
+        int pointer_size = sizeof(void(*)(Context<T>*));
+        this->tasks = (void (**)(Context<T> *))realloc(this->tasks, this->size * pointer_size);
         this->tasks[size - 1] = f;
     }
     void pop_task()
     {
+        int pointer_size = sizeof(void(*)(Context<T>*));
         this->size--;
-        this->tasks = (void (**)(Context<T> *))realloc(this->tasks, this->size * sizeof(void (*)(Context<T> *)));
+        this->tasks = (void (**)(Context<T> *))realloc(this->tasks, this->size * pointer_size);
     }
     void execute()
     {
