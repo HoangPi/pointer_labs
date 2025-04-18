@@ -45,14 +45,16 @@
             "label": "C/C++: cl.exe build active file",
             "command": "cl.exe",
             "args": [
+                // "/EHsc",
+                // "/nologo",
+                "${file}",
+                "/Fe${workspaceRoot}\\debug\\main.exe",
+                "/Fo${workspaceRoot}\\debug\\main.obj",
                 "/Zi",
-                "/EHsc",
-                "/nologo",
-                "/Fe${workspaceRoot}\\t\\main.exe",
-                "${file}"
+                "/link",
             ],
             "options": {
-                "cwd": "${workspaceRoot}\\t"
+                "cwd": "${workspaceRoot}\\debug"
             },
             "problemMatcher": [
                 "$msCompile"
