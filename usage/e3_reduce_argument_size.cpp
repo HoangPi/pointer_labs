@@ -16,7 +16,7 @@ void with_pointer(big_struct *a){
     // Using pointer does not create a copy of data
     // You are refering to the original data using a pointer that point to it
     printf("Size of data is %ld\n", sizeof(a));
-    // The syntax is a big different but intellisense can help you with it
+    // The syntax is a bit different but intellisense can help you with it
     printf("%lld %lld %lld %lld\n", a->a, a->b, a->c, a->d);
 }
 
