@@ -51,3 +51,10 @@ code .
 - You will need do **step 1** even before cloning step and both **steps 1** and **2** every time you want to open the project.
     -  **Step 1:** Search and open **Develop Command Prompt for VS** in your Windows search bar.
     - **Step 2:** Run <code>code path/to/the/project</code>
+
+# License
+This project is licensed under the MIT License. See the <a href="./LICENSE" target="_blank">LICENSE</a> file for more details.
+# Contact
+- **Email**
+    - voduchoangphi@gmail.com
+    - 20110432@student.hcmute.edu.vn
