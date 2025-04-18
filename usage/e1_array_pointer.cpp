@@ -15,7 +15,7 @@ int find_max(int *arr, int size){
 }
 
 
-// This is can pass array as the argument
+// This can pass array as the argument
 // But to initilize array, you still need to use a constant value (5)
 int main(){
     int arr[5] = {1,2,3,4,5};
