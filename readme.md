@@ -6,7 +6,7 @@
 - Clean, modularzied examples
 - Vase usages of pointer
 - Pre-cautions when using pointers
-- Cursed and unethical way to abuse pointer
+- Cursed and unethical ways to abuse pointer
 # 🛠️ Prerequisites
 ## Compiler
 ### Linux
