@@ -56,5 +56,6 @@ int main()
     // also remember to wrap your pointer and cast block in another ()
     int (*temp)(int, int);
     ptr = &add;
+    // The int(b) is type convert, not type cast
     printf("Add is          %d\n", ((int (*)(int, int))ptr)(a, int(b)));
 }
