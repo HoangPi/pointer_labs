@@ -31,7 +31,7 @@ int main()
     printf("Integer is      %d\n", *(int *)ptr);
     // although it got the address, the compiler though it is just a normal integer (not pointer)
     // So trying to dereference that "false cast" causes compiling error
-    printf("False cast is   %lx\n", (int)ptr);
+    printf("False cast is   %lx\n", (long)ptr);
     printf("Address of a is %p\n", &a);
     // printf("False cast is   %lx\n", *(int)ptr); //This is false
 
@@ -55,7 +55,9 @@ int main()
     // then remove the name (temp)
     // also remember to wrap your pointer and cast block in another ()
     int (*temp)(int, int);
-    ptr = &add;
+    // cl can assign function address to function pointer
+    // gcc does not do it do it needs casting first
+    ptr = (void *)add;
     // The int(b) is type convert, not type cast
     printf("Add is          %d\n", ((int (*)(int, int))ptr)(a, int(b)));
 }
