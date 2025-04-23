@@ -5,10 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "cmake",
+            "request": "launch",
+            "name": "CMake: Configure project",
+            "cmakeDebugType": "configure",
+            "clean": false,
+            "configureAll": false
+        },
+        {
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/main",
+            "program": "${workspaceRoot}/build/program.exe",
             "MIMode": "gdb",
             "cwd": "${workspaceRoot}",
             "setupCommands": [
@@ -23,7 +31,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++ build active file"
+            "preLaunchTask": "CMake Build And Compile"
         },
         {
             "name": "(Windows) Launch",
