@@ -7,10 +7,11 @@ void do_nothing(int i)
     long long *x = new long long;
     if (i % 1000000 == 0)
     {
-        printf("Address of x is %p\n", &x); // This will be the same regardless
-        printf("value of x is %p\n", x);    // This will increase steadily and cause overflow
+        printf("Address of x is %p\n", &x);
+        printf("value of x is %p\n", x);    
     }
     delete x;
+    x = nullptr;
 }
 void delayed_stop(int *stop_flag)
 {
