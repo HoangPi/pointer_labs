@@ -5,10 +5,11 @@
 void do_nothing(int i)
 {
     long long *x = new long long;
-    if (i % 1000000 == 0)
+    if (i % 100000000 == 0)
     {
         printf("Address of x is %p\n", &x);
-        printf("value of x is %p\n", x);    
+        printf("value of x is %p\n", x);
+        printf("Interaction No. %d\n", i);
     }
     delete x;
     x = nullptr;
