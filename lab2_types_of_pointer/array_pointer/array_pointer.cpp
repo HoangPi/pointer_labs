@@ -11,6 +11,7 @@ int main(){
         // printf("%d ", *(arr + i));
         // printf("%d ", ptr[i]);
         // printf("%d ", *(ptr + i));
+        printf("%p\n", arr + i);
     }
     printf("\nAddress of arr is %p", &arr);
     printf("\nValue   of arr is %p\n", arr);
